@@ -170,7 +170,7 @@ const Workbench = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                   {workspace.map((item, i) => (
                     <div key={i} className="p-5 bg-slate-950/40 border border-white/5 flex items-center space-x-4 hover:border-cyan-500/20 transition-colors">
-                      <item.isDirectory ? <Folder size={12} className="text-cyan-500" /> : <File size={12} className="text-slate-600" />}
+                      {item.isDirectory ? <Folder size={12} className="text-cyan-500" /> : <File size={12} className="text-slate-600" />}
                       <span className="text-[9px] font-bold text-slate-300 truncate tracking-widest">{item.name}</span>
                     </div>
                   ))}
